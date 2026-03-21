@@ -5,6 +5,8 @@
 Tarefa: Em duplas, os alunos fazem um mapa das transformações executadas do Sol → Planeta → Lua.
 Produto: Um diagrama simples (papel ou quadro digital) com caixas “Sol”, “Planeta i”, “Lua de i” e setas apontando as transformações.
 
+> Feito no arquivo 'Diagrama Etapa 1.png'
+
 ## Etapa 2 — Explanação do fluxo de atualização
 
 Tarefa: Identificar onde theta é incrementado, como orbitspeed influencia o movimento, e porque as velocidades das luas podem ser positivas ou negativas (órbita horária/anti-horária).
