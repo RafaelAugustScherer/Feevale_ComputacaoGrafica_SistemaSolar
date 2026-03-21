@@ -12,6 +12,14 @@ Produto: Um diagrama simples (papel ou quadro digital) com caixas “Sol”, “
 Tarefa: Identificar onde theta é incrementado, como orbitspeed influencia o movimento, e porque as velocidades das luas podem ser positivas ou negativas (órbita horária/anti-horária).
 Produto: 3–5 bullet points que expliquem update() de Planet e Moon.
 
+> * O update() de Planet é chamado pelo Sistema Solar na etapa draw(), ou seja, a cada frame gerado.
+> * O update() de Planet chama internamente o update() de Moon.
+> * Ambos os update() de Planet e de Moon incrementam seus valores internos de theta com seu valor interno de velocidade de órbita (orbitspeed).
+> * O valor da velocidade de órbita é definido na inicialização da Classe, e é um valor fixo aleatório. A velocidade das luas pode ser positiva ou negativa dado que o valor aleatório fica entre 0,1 negativo e 0,1 positivo.
+> * Como o valor de theta é usado para definir a rotação dos objetos em relação a quem o instanciou, o valor de velocidade de órbita impacta diretamente no movimento de rotação.
+>
+> Adicionados os desenhos/diagramas 'Definição de Classes.png' e 'Fluxo de Execução.png' para auxiliar no entendimento.
+
 ## Etapa 3 — Extensão
 
 Cada dupla implementa as seguintes modificações preservando a arquitetura:
