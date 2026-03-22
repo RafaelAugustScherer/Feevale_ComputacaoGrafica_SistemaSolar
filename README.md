@@ -34,3 +34,16 @@ Tarefa: Entregar um README (5–10 linhas) respondendo:
 Onde você aplicou pushMatrix()/popMatrix() e por quê?
 O que mudaria se invertêssemos rotate() e translate() no planeta ou na lua?
 Como garantiu que cada órbita é independente das demais? (composição/atualização separada em update() e uso de matrizes aninhadas)
+
+> **Onde você aplicou pushMatrix()/popMatrix() e por quê?**
+>
+> Foi mantida a implementação existente de pushMatrix() e popMatrix() para manter a arquitetura atual, onde o Planet faz push, e cada lua internamente faz push e pop. Dessa forma, as alterações de cada lua são sanitizadas antes de passar para a próxima lua ou retornar ao Planet.
+>
+> **O que mudaria se invertêssemos rotate() e translate() no planeta ou na lua?**
+>
+> Se mudar o parâmetro passado ao método rotate(), o sentido da rotação seria invertido. Se antes era rotacionado no sentido horário, passará a ser anti-horário e vice-versa. Se muadr o parâmetro passado ao método translate(), o objeto seria renderizado no lado inverso ao estabelecido pela rotação. Ou seja, se antes o planeta era renderizado no lado direito do Sistema Solar (dado que a rotação apontava para um ângulo equivalente ao de 90°), passará a ser renderizado no lado esquerdo.
+>
+> **Como garantiu que cada órbita é independente das demais? (composição/atualização separada em update() e uso de matrizes aninhadas)**
+>
+> Mantendo a arquitetura já existente, que garante que cada objeto fará uma "sanitização" na sua matriz e não influneciará na anterior. Quanto aos valores da órbita, cada objeto inicializa e armazena seu próprio número de velocidade de órbita, e respeita a determinação de tamanho e distância estabelecidos via parâmetro.
+

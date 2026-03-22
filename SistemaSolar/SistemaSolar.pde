@@ -5,9 +5,12 @@ void setup() {
   size(480, 270);
 
   // The planet objects are initialized using the counter variable
-  for (int i = 0; i < planets.length; i++ ) {
-    planets[i] = new Planet(60 + i*36, 24);
+  for (int i = 0; i < planets.length - 1; i++ ) {
+    planets[i] = new Planet(60 + i*36, 24, 1);
   }
+  
+  // Initialize last planet with two moons
+  planets[2] = new Planet(60 + 2*36, 24, 2);
 }
 
 void draw() {
